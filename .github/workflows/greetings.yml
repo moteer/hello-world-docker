@@ -18,6 +18,6 @@ jobs:
 
     - uses: cinotify/github-action@main
       with:
-        to: 'erik.hoelzel@posteo.de'
+        to: 'edward.fetzer@gmx.de'
         subject: 'Es gab einen Pull request oder ein issue'
         body: 'HALLLO ########## :)'
