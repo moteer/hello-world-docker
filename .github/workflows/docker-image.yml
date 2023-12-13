@@ -23,8 +23,8 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Log in to Docker Hub
+      - name: Build and push Docker image
         run: |
-          docker build -t my-hello-world-docker:latest .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mein-hello-world-docker:latest .
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-          docker image push my-hello-world-docker:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mein-hello-world-docker:latest
