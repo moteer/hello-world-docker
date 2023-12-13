@@ -25,6 +25,6 @@ jobs:
 
       - name: Log in to Docker Hub
         run: |
-          docker build -t my-hello-world-docker:latest
+          docker build my-hello-world-docker:latest .
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker image push my-hello-world-docker:latest
