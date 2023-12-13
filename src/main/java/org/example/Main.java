@@ -7,7 +7,7 @@ public class Main {
         int count =0;
         while (true) {
             Thread.sleep(2*1000);
-            System.out.println("Jetzt gehts erst richtig los");
+            System.out.println("Auf los gehts los");
             System.out.println(format("App running ... %d", count++));
         }
     }
